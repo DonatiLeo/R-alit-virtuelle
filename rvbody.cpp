@@ -47,7 +47,7 @@ void RVBody::initialize()
 void RVBody::initializeVAO()
 {
     //Initialisation du VAO
-    vao.create();
+    //vao.create();
     vao.bind();
     vbo.bind();
     ibo.bind();
@@ -74,11 +74,14 @@ void RVBody::initializeShader()
 {
     initializeOpenGLFunctions();
 
+
+    program.bind();
+
     if (program.hasOpenGLShaderPrograms())
         program.removeAllShaders();
     bool resultat;
 
-    program.bind();
+
     //Vertex Shader
     resultat = program.addShaderFromSourceFile(QOpenGLShader::Vertex, VSFileName);
     if (!resultat)     {
@@ -163,7 +166,7 @@ RVCamera *RVBody::getCamera() const
 
 void RVBody::setCamera(RVCamera *camera)
 {
-    camera = camera;
+    this->camera = camera;
 }
 
 QVector3D RVBody::getPosition() const
@@ -200,7 +203,7 @@ bool RVBody::getWireframe() const{
 }
 
 void RVBody::setWireframe(bool wireframe){
-    wireframe = wireframe;
+    this->wireframe = wireframe;
 }
 
 bool RVBody::getCulling() const{
@@ -208,11 +211,11 @@ bool RVBody::getCulling() const{
 }
 
 void RVBody::setCulling(bool culling){
-    culling = culling;
+    this->culling = culling;
 }
 
 void RVBody::setScale(int scale){
-    scale = scale;
+    this->scale = scale;
 }
 
 float RVBody::getScale() const{
