@@ -72,7 +72,7 @@ float RVCamera::getZMin() const
 
 void RVCamera::setZMin(float zMin)
 {
-    zMin = zMin;
+    this->zMin = zMin;
 }
 
 float RVCamera::getZMax() const
@@ -82,7 +82,7 @@ float RVCamera::getZMax() const
 
 void RVCamera::setZMax(float zMax)
 {
-    zMax = zMax;
+    this->zMax = zMax;
 }
 
 float RVCamera::getFov() const
@@ -92,7 +92,7 @@ float RVCamera::getFov() const
 
 void RVCamera::setFov(float fov)
 {
-    fov = fov;
+    this->fov = fov;
 }
 
 float RVCamera::getAspect() const
@@ -102,7 +102,7 @@ float RVCamera::getAspect() const
 
 void RVCamera::setAspect(float aspect)
 {
-    aspect = aspect;
+    this->aspect = aspect;
 }
 
 void RVCamera::setOrthogonal(bool val){
